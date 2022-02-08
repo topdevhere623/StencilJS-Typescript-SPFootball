@@ -1,0 +1,12 @@
+ffspb-referees-training-page {
+  ffspb-page-head {
+    .email {
+      display: flex;
+      align-items: center;
+      a {
+        margin-left: var(--padding-main);
+        color: var(--font-color-main);
+      }
+    }
+  }
+}

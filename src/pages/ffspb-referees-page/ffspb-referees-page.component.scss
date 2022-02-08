@@ -1,0 +1,85 @@
+ffspb-referees-page {
+  &.desktop {
+    ftb-searchable-content {
+      margin-top: calc(-1 * var(--control-element-height));
+      .ftb-searchable-content__search-line {
+        margin-left: calc(230px + var(--padding-main));
+      }
+    }
+  }
+
+  &.mobile {
+    ffspb-switch {
+      margin: 0 auto;
+      margin-top: -30px;
+    }
+    ftb-searchable-content {
+      .ftb-searchable-content__search-line {
+        margin-top: calc(2 * var(--padding-main));
+        margin-bottom: var(--padding-main);
+        .category-wrapper {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  ffspb-content-inner {
+    min-height: calc(100% - 489px - 300px) !important;
+  }
+
+  ftb-searchable-content {
+    display: block;
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .ftb-searchable-content__content {
+    .referee-card {
+      .card-content {
+        display: flex;
+        ftb-user-photo {
+          min-width: 110px;
+          max-width: 150px;
+          height: calc(3 * var(--control-element-height));
+          position: relative;
+          img {
+            object-fit: cover;
+          }
+        }
+        .info {
+          flex: 1;
+          .title {
+            width: 100px;
+          }
+        }
+      }
+
+      &:hover {
+        .card-head {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .referees-list {
+    padding: calc(2 * var(--padding-main)) 0;
+  }
+  &.desktop {
+    .referees-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 1150px) {
+      .referees-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  &.mobile {
+    .referees-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

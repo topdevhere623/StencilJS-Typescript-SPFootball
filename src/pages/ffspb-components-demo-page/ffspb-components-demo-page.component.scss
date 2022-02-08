@@ -1,0 +1,57 @@
+ffspb-components-demo-page {
+  section {
+    margin-bottom: var(--section-margin-bottom);
+  }
+
+  ffspb-button {
+    margin-bottom: calc(2 * var(--padding-main));
+  }
+  ftb-searchable-content {
+    margin-bottom: calc(2 * var(--padding-main));
+  }
+
+  &.desktop {
+    .top-grid {
+      padding: var(--padding-main) 0;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .bottom-grid {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  &.mobile {
+    .top-grid {
+      padding: var(--padding-main) 0;
+      grid-template-columns: 1fr;
+    }
+    .bottom-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .player-card {
+    ffspb-card-content {
+      display: flex;
+      align-items: center;
+
+      table {
+        flex: 1;
+      }
+    }
+  }
+
+  ftb-virtual-scroll {
+    .virtual-scroll__list {
+      max-height: 300px;
+    }
+    .item {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      color: var(--font-color-auxiliary);
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--border-dark);
+      }
+    }
+  }
+}

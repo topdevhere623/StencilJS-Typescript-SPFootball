@@ -1,0 +1,25 @@
+ffspb-docs-page {
+  .head {
+    padding: calc(1.5 * var(--padding-main));
+    color: var(--font-color-main);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-big);
+  }
+  .document-row {
+    padding: calc(1.5 * var(--padding-main));
+    color: var(--font-color-auxiliary);
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      color: var(--font-color-main);
+    }
+    ftb-icon {
+      height: 25px;
+      width: 25px;
+      margin-right: var(--padding-main);
+      fill: var(--font-color-auxiliary);
+    }
+  }
+}

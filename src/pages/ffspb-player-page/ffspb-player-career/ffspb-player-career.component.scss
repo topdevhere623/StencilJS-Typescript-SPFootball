@@ -1,0 +1,76 @@
+ffspb-player-career {
+  ffspb-card {
+    ffspb-card-content {
+      table {
+        tr {
+          height: calc(2.5 * var(--padding-main)) !important;
+        }
+      }
+      .main-team {
+        height: calc(7.5 * var(--padding-main)) !important;
+      }
+      .content {
+        min-width: calc(60 * var(--padding-main));
+        border-bottom: 1px #494949 solid;
+        .body {
+          display: flex;
+          justify-content: space-between;
+          .text {
+            color: var(--font-color-auxiliary);
+            font-weight: 400;
+            font-size: 18px;
+          }
+          .title {
+            color: var(--font-color-main);
+          }
+          .details-main {
+            display: flex;
+            justify-content: space-between;
+            gap:calc(4 * var(--padding-main));
+            padding-right: calc(4.5 * var(--padding-main));
+          }
+          .details {
+            display: flex;
+            justify-content: space-between;
+            gap:calc(5 * var(--padding-main));
+            padding-right: calc(5 * var(--padding-main));
+          }
+          .txt {
+            font-size: 16px;
+            color: var(--font-color-auxiliary);
+            font-weight: 400;
+          }
+        }
+      }
+      .side-bar {
+        border-right: 3px #494949 solid;
+      }
+      .head {
+        border-bottom: 3px #494949 solid;
+        width: calc(2.3 * var(--padding-main)) !important;
+      }
+      .footer {
+        border-top: 3px #494949 solid;
+        width: calc(2.3 * var(--padding-main)) !important;
+      }
+      .head-year {
+        position: relative;
+        top: calc(1.5 * var(--padding-main));
+        font-size: 20px;
+        font-weight: var(--font-weight-bold);
+        left: calc(3.3 * var(--padding-main));
+        color: var(--font-color-main);
+      }
+      .right {
+        border-bottom: 3px #494949 solid;
+      }
+      .cell {
+        width: calc(2.5 * var(--padding-main)) !important;
+        border: none !important;
+      }
+      tr {
+        border: none !important;
+      }
+    }
+  }
+}

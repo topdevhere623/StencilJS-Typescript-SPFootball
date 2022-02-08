@@ -1,0 +1,121 @@
+ffspb-side-menu {
+  .search-on {
+    ion-menu {
+      --width: 100vw;
+    }
+  }
+  ion-menu {
+    .title-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 700;
+      ion-button {
+        padding: 0 11px;
+        background: transparent;
+        height: 35px;
+        margin-right: -21px;
+        ftb-icon {
+          height: 18px;
+          width: 18px;
+          fill: #adadad;
+        }
+      }
+    }
+
+    ion-content {
+      --background: #2a2a2a;
+      --padding-start: 22px;
+      --padding-end: 22px;
+      .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .searchbar {
+      --color: #999 !important;
+      padding: 0 !important;
+      height: 60px !important;
+      margin-left: -5px;
+      width: calc(100% + 10px);
+      input {
+        padding-inline-start: 50px !important;
+      }
+      ion-icon {
+        margin-left: 10px !important;
+      }
+    }
+
+    .menu-list {
+      flex: 1;
+
+      .menu-line {
+        width: 100%;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 22px;
+        color: #adadad;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #555555;
+        }
+        ftb-icon {
+          height: 9px;
+          width: 9px;
+          transform: rotate(-90deg);
+          fill: #adadad;
+        }
+      }
+
+      .back-button-line {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .slide-back-button {
+          font-size: 18px;
+          line-height: 22px;
+          color: white;
+          text-transform: uppercase;
+          --padding-start: 0;
+          --padding-end: 0;
+          ftb-icon {
+            height: 12px;
+            width: 12px;
+            margin-right: 10px;
+            fill: white;
+          }
+        }
+      }
+    }
+
+    .search-list {
+      flex: 1;
+      .description {
+        color: #adadad;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px 22px;
+      }
+    }
+
+    .bottom-info {
+      padding: 22px;
+      text-align: center;
+      color: #555;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}

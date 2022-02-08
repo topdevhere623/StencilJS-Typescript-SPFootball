@@ -1,0 +1,71 @@
+ffspb-player-info {
+  min-width: calc(50 * var(--padding-main));
+  ffspb-card {
+    ffspb-card-content.person-card {
+      ftb-player-photo {
+        height: 199px !important;
+        width: 150px !important;
+        ftb-img {
+          div {
+            img {
+              height: 199px !important;
+              width: 150px !important;
+            }
+          }
+        }
+      }
+      td {
+        text-align: left !important;
+      }
+      .num {
+        text-align: center;
+        background-color: #282828;
+        color: var(--font-color-auxiliary);
+      }
+      .menu-item {
+        cursor: pointer;
+        margin-left: calc(1.5 * var(--padding-main));
+        transition: color 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        position: relative;
+        color: var(--font-color-main);
+        text-decoration: none;
+        ftb-icon.ftb-team {
+          height: calc(4 * var(--padding-main));
+          margin-right: var(--padding-main);
+        }
+        ftb-icon {
+          fill: var(--font-color-auxiliary);
+          height: 9px;
+          transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+          margin-left: 5px;
+          margin-top: 3px;
+        }
+        &:hover {
+          color: #eeeeee;
+          ftb-icon {
+            fill: #eeeeee;
+          }
+        }
+      }
+      .team {
+        height: calc(2 * var(--control-element-height));
+        td {
+          a {
+            ftb-team-logo {
+              height: calc(4 * var(--padding-main));
+              width: calc(4 * var(--padding-main));
+              margin-right: calc(1.5 * var(--padding-main));
+            }
+          }
+        }
+      }
+    }
+    ffspb-card-head {
+      font-size: var(--font-size-big);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}

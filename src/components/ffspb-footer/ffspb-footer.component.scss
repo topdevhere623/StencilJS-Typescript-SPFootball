@@ -1,0 +1,268 @@
+ffspb-footer {
+  .desktop-wrapper {
+    margin-top: 120px;
+    width: 100%;
+    background: #292929;
+    display: block;
+    text-align: center;
+    .footer-content {
+      padding: 44px 0;
+      max-width: 1600px;
+      margin: 0 auto;
+
+      .columns {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        .column {
+          margin-bottom: 10%;
+          padding: 0 20px;
+          h4 {
+            margin: 0;
+            font-weight: 700;
+            color: white;
+            font-size: 16px;
+            text-align: left;
+          }
+          h5 {
+            font-weight: 400;
+            color: white;
+            font-size: 16px;
+            text-align: left;
+            margin-top: 15px;
+          }
+
+          .line {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #adadad;
+            margin-top: 15px;
+            text-align: left;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+              //color: white;
+              text-decoration: underline;
+            }
+            ftb-icon {
+              margin-right: 11px;
+              height: 25px;
+            }
+          }
+
+          .socials {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            ftb-icon {
+              height: 22px;
+              margin-right: 17px;
+              border-radius: 4px;
+              opacity: 0.95;
+              transition: opacity 0.2s ease-in-out;
+              &.vk-icon {
+                height: 18px;
+              }
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          .stores {
+            margin-top: 15px;
+            .store {
+              margin-top: 10px;
+              background: black;
+              display: flex;
+              align-items: center;
+              width: 175px;
+              height: 60px;
+              border-radius: 10px;
+              cursor: pointer;
+              &:hover {
+                ftb-icon {
+                  transform: scale(1.05);
+                }
+              }
+
+              .download-link {
+                white-space: nowrap;
+              }
+              ftb-icon {
+                fill: white;
+                height: 30px;
+                width: 30px;
+                margin: 0 25px;
+                transition: transform 0.2s ease-in-out;
+                &.google-icon {
+                  height: 40px;
+                }
+              }
+              .text {
+                color: white;
+                text-align: left;
+                .download-link {
+                  font-size: 12px;
+                }
+                .store-link {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+          @media only screen and (max-width: 1150px) {
+            .line {
+              font-size: 14px !important;
+            }
+            .store {
+              height: 50px !important;
+            }
+          }
+        }
+      }
+
+      .copyright-line {
+        color: #515151;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ftb-icon {
+          height: 17px;
+          margin-right: 5px;
+          fill: #515151;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+
+  .mobile-wrapper {
+    background: #292929;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: 600px) {
+      justify-content: space-between;
+    }
+
+    .column {
+      padding-left: 22px;
+      padding-top: 35px;
+      min-width: 300px;
+      h4 {
+        margin: 0;
+        font-weight: 700;
+        color: white;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      h5 {
+        font-weight: 400;
+        color: white;
+        font-size: 16px;
+        text-align: left;
+        margin-top: 15px;
+      }
+
+      .line {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #adadad;
+        margin-top: 15px;
+        text-align: left;
+        transition: color 0.2s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          //color: white;
+          text-decoration: underline;
+        }
+
+        ftb-icon {
+          margin-right: 11px;
+          height: 25px;
+        }
+      }
+    }
+
+    .stores {
+      display: flex;
+      margin-top: 20px;
+      .store {
+        background: black;
+        display: flex;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 10px;
+        .download-link {
+          white-space: nowrap;
+        }
+        ftb-icon {
+          fill: white;
+          height: 25px;
+          width: 25px;
+          margin: 0 20px;
+          transition: transform 0.2s ease-in-out;
+          &.google-icon {
+            height: 35px;
+          }
+        }
+        .text {
+          color: white;
+          text-align: left;
+          .download-link {
+            font-size: 12px;
+          }
+          .store-link {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      ftb-icon {
+        height: 32px;
+        margin-right: 10px;
+        border-radius: 4px;
+        &.vk-icon {
+          height: 27px;
+        }
+      }
+    }
+
+    .copyright-line {
+      color: #515151;
+      font-size: 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      ftb-icon {
+        height: 17px;
+        width: 17px;
+        margin-right: 5px;
+        fill: #515151;
+        margin-top: -2px;
+      }
+    }
+  }
+}

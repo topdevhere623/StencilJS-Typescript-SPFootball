@@ -1,0 +1,27 @@
+ffspb-player-page {
+    ffspb-content {
+        ffspb-content-inner {
+            .grid {
+                .info {
+                    grid-area: info;
+                }
+                .statics {
+                    grid-area: statics;
+                }
+                .params {
+                    grid-area: params;
+                }
+                .games {
+                    grid-area: games;
+                }
+                .career {
+                    grid-area: career;
+                }
+                grid-template-areas:
+                  'info info info info info statics params params params params params params'
+                  'games games games games career career career career career career career career';
+                grid-template-rows: auto;
+            }
+        }
+    }
+}

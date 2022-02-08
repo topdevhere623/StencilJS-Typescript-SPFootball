@@ -1,0 +1,14 @@
+ffspb-content-inner {
+  display: block;
+  &.desktop {
+    min-height: calc(100% - 489px);
+    max-width: calc(var(--content-width));
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 var(--padding-main);
+  }
+  &.mobile {
+    margin: 0 auto;
+    padding: 0 var(--padding-main);
+  }
+}

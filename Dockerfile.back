@@ -1,0 +1,16 @@
+FROM node:14.18-alpine
+
+WORKDIR /usr/src/app
+
+ENV NODE_ENV production
+
+RUN mkdir -p dist
+
+# copy server app files from build stage to new image
+COPY --from=ffspb-builder /usr/src/app/www www
+COPY --from=ffspb-builder /usr/src/app/hydrate hydrate
+COPY backend backend
+
+RUN npm i express
+
+CMD node --max_old_space_size=4096 backend/index.js

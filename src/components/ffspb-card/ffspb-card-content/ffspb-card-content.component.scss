@@ -1,0 +1,169 @@
+ffspb-card-content {
+  display: flex;
+  background: #2e2e2e;
+
+  table {
+    display: table;
+    flex: 1;
+    tr {
+      height: var(--control-element-height);
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--border-dark);
+      }
+      td {
+        height: var(--control-element-height);
+      }
+      td:first-of-type {
+        color: var(--font-color-auxiliary);
+        background: #282828;
+        padding: 0 calc(var(--padding-main) * 1.5);
+        white-space: nowrap;
+        height: var(--control-element-height);
+      }
+      td:last-of-type {
+        color: var(--font-color-main);
+        padding: 0 calc(var(--padding-main) * 1.5);
+        position: relative;
+        text-align: center;
+        height: var(--control-element-height);
+        &:after {
+          display: block;
+          content: ' ';
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: var(--padding-main);
+          background: linear-gradient(to right, rgba(40, 40, 40, 0), #282828);
+        }
+      }
+    }
+  }
+
+  ftb-searchable-content {
+    padding: calc(1.5 * var(--padding-main));
+    padding-bottom: 0;
+    flex: 1;
+    .input-wrapper {
+      border: 1px solid transparent;
+      background: #414141;
+      box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.1);
+      transition: background-color var(--animation-style);
+      .search-icon {
+        fill: var(--font-color-auxiliary);
+      }
+      input {
+        color: var(--font-color-main);
+        background: transparent;
+        border: none;
+        outline: none;
+        &::placeholder {
+          color: #818181;
+        }
+        &.main-input {
+          padding-left: 43px !important;
+        }
+      }
+      .search-icon {
+        height: 18px !important;
+        width: 18px !important;
+        top: 15px !important;
+        left: 15px !important;
+        fill: var(--font-color-auxiliary) !important;
+      }
+      .category-background {
+        color: var(--font-color-auxiliary);
+        ftb-icon {
+          fill: var(--font-color-auxiliary);
+          transition: fill var(--animation-style);
+        }
+      }
+
+      &.focused,
+      &.dirty {
+        border-color: var(--border-dark);
+        .search-icon {
+          fill: var(--font-color-main) !important;
+        }
+      }
+      &:hover {
+        background: var(--border-dark);
+      }
+    }
+  }
+  .options-inner {
+    background: #363636 !important;
+    border: 1px solid var(--border-dark) !important;
+  }
+
+  ftb-virtual-scroll {
+    display: block;
+    position: relative;
+    &:before,
+    &:after {
+      display: block;
+      content: ' ';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: calc(2 * var(--padding-main));
+      z-index: 10;
+    }
+    &:before {
+      top: 0;
+      background: linear-gradient(to bottom, #2e2e2e, rgba(46, 46, 46, 0));
+    }
+    &:after {
+      bottom: 0;
+      background: linear-gradient(to top, #2e2e2e, rgba(46, 46, 46, 0));
+    }
+    .virtual-scroll__list {
+      overflow-y: auto;
+      padding-bottom: calc(1 * var(--padding-main));
+      margin-top: calc(1 * var(--padding-main));
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #313131;
+      }
+      &::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 8px silver;
+        border-radius: var(--border-radius);
+      }
+    }
+  }
+
+  &.person-card {
+    display: flex;
+    align-items: center;
+    table {
+      flex: 1;
+    }
+    ftb-player-photo,
+    ftb-user-photo {
+      height: calc(3 * var(--control-element-height));
+      width: 130px;
+      min-width: 130px;
+      position: relative;
+      z-index: 0;
+      &:after {
+        display: block;
+        content: ' ';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: inset -4px 0px 15px rgba(0, 0, 0, 0.25);
+      }
+
+      img,
+      ftb-icon {
+        height: calc(3 * var(--control-element-height));
+        width: 130px;
+        object-fit: cover;
+      }
+    }
+  }
+}

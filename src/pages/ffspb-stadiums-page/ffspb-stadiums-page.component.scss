@@ -1,0 +1,64 @@
+ffspb-stadiums-page {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .map-card {
+    height: 727px;
+  }
+
+  .stadiums-card {
+    .virtual-scroll__list {
+      max-height: 601px;
+    }
+
+    ion-router-link:not(:last-of-type) {
+      .stadium-row {
+        border-bottom: 1px solid var(--border-dark);
+      }
+    }
+    .stadium-row {
+      display: flex;
+      align-items: center;
+      padding: calc(1.5 * var(--padding-main));
+      width: calc(100% - 1.5 * var(--padding-main));
+
+      &:hover {
+        ftb-stadium-photo img {
+          transform: scale(1.05);
+        }
+      }
+
+      ftb-stadium-photo {
+        height: 65px;
+        width: 95px;
+        border-radius: var(--border-radius);
+        margin-right: var(--padding-main);
+        overflow: hidden;
+        img {
+          transition: transform 0.2s ease-in-out;
+        }
+      }
+      .info {
+        height: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .name {
+          color: var(--font-color-main);
+        }
+        .city {
+          display: flex;
+          color: var(--font-color-auxiliary);
+          font-size: 14px;
+          ftb-icon.location-icon {
+            height: 14px;
+            width: 14px;
+            margin-right: calc(var(--padding-main) / 2);
+            fill: var(--font-color-auxiliary);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+ffspb-player-games {
+    min-width: calc(40 * var(--padding-main));
+    ffspb-card {
+        ffspb-card-head {
+            display: flex;
+            align-items: center;
+            a {
+                color: var(--font-color-auxiliary);
+                font-weight: 400;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition:
+                colorvar(--animation-style);
+                ;
+                &:hover {
+                    color:  var(--font-color-main);
+                    ftb-icon {
+                        margin-left: var(--padding-main);
+                        fill:  var(--font-color-main);
+                    }
+                }
+                ftb-icon {
+                    margin-left: var(--padding-main);
+                }
+            }
+        }
+        ffspb-card-content {
+            margin-top: calc(2 * var(--padding-main));
+            margin-left: calc(1.5 * var(--padding-main));
+            margin-right: calc(1.5 * var(--padding-main));
+            display: flex;
+            flex-direction: column;
+            .match{
+                margin-bottom: calc(2 * var(--padding-main));
+                .game-header {
+                    display: flex;
+                    height: calc(2 * var(--padding-main));
+                    div.game-date {
+                        display: flex;
+                        justify-content: center;
+                        ftb-icon {
+                            fill: var(--font-color-auxiliary);
+                        }
+                        span {
+                            margin-left: var(--padding-main);
+                            margin-right: var(--padding-main);
+                            color: var(--font-color-auxiliary);
+                        }
+                    }
+                    span.game-time {
+                        color: var(--font-color-auxiliary);
+                        padding-left: var(--padding-main);
+                        border-left: 1px solid;
+                    }
+                }
+                .game-content {
+                    margin-top: calc(2 * var(--padding-main));
+                    display: flex;
+                    justify-content: space-between;
+                    .game-teams {
+                        .game-team {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: calc(1.5 * var(--padding-main));
+                                ftb-team-logo {
+                                height: calc(4 * var(--padding-main));
+                                margin-right: calc(1.5 * var(--padding-main));
+                                }
+                            span {
+                                color: var(--font-color-main);
+                            }
+                        }
+                    }
+                    .game-result {
+                        display: flex;
+                        align-items: center;
+                        .game-score {
+                            width: 12px;
+                            display: grid;
+                            font-size: 20px;
+                            font-weight: var(--font-weight-bold);
+                            height: calc(8 * var(--padding-main));
+                            margin-bottom: 9px;
+                            color: var(--font-color-main);
+                            hr {
+                                background-color: var(--font-color-main);
+                                width: var(--padding-main);
+                            }
+                        }
+                        .game-detail {
+                            width: calc(4.2 * var(--padding-main));
+                            height: calc(8 * var(--padding-main));
+                            display: grid;
+                            margin-left: calc(2 * var(--padding-main));
+                            margin-bottom: 12px;
+                            div.card {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                div.yellow-card {
+                                    background-color: yellow;
+                                    height: calc(1.5 * var(--padding-main));
+                                    width: calc(1.5 * var(--padding-main));
+                                    border-radius: 50%;
+                                }
+                                div.red-card {
+                                    background-color: red;
+                                    height: calc(1.5 * var(--padding-main));
+                                    width: calc(1.5 * var(--padding-main));
+                                    border-radius: 50%;
+                                }
+                            }
+                            h4 {
+                                font-weight: 400;
+                                color: var(--font-color-auxiliary);
+                                margin: 0px;
+                            }
+                            .goals {
+                                color: #6C6C6C;
+                            }
+                            div {
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+                .game-footer {
+                    border-bottom: 1px solid var(--border-dark);
+                    .game-type {
+                        color: var(--font-color-auxiliary);
+                        background: var(--border-dark);
+                        border-radius: var(--border-radius) var(--border-radius)  calc(0 * var(--border-radius)) calc(0 * var(--border-radius));
+                        width: max-content;
+                        padding: calc(0.5 * var(--padding-main)) var(--padding-main);
+                    }
+                }
+            }
+        }
+    }
+}

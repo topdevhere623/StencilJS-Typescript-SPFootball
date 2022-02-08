@@ -1,0 +1,83 @@
+ffspb-button {
+  display: block;
+  button {
+    height: var(--control-element-height);
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    transition: all var(--animation-style);
+    font-size: var(--font-size-main);
+
+    ion-router-link {
+      height: 100%;
+      padding: 0 calc(3 * var(--padding-main));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: calc(-1 * var(--border-radius));
+      margin-right: calc(-1 * var(--border-radius));
+    }
+
+    &.steel {
+      background-size: 220% !important;
+      background-position: left;
+      background-image: linear-gradient(111deg, #c9c9c9 0%, #fefefe 24%, #c9c9c9 50%, #d4d4d4 50%, #696969 150%);
+      //background: linear-gradient(111.34deg, #c9c9c9 0%, #fefefe 24%, #c9c9c9 50%, #979797 50%, #4a4a4a 100%);
+      ion-router-link {
+        color: var(--font-color-black);
+      }
+    }
+    &.black {
+      background-size: 200% !important;
+      background-position: left;
+      background: linear-gradient(111deg, #737373 0, #424242 25%, #252525 50%, #000000 100%);
+      ion-router-link {
+        color: var(--font-color-main);
+      }
+    }
+    &.outline {
+      box-shadow: 0 0 0 2px var(--font-color-auxiliary);
+      background: transparent;
+      height: calc(var(--control-element-height) - 4px);
+      z-index: 1;
+      ion-router-link {
+        color: var(--font-color-main);
+        transition: color var(--animation-style);
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: ' ';
+        display: block;
+        z-index: -1;
+        background: linear-gradient(111.34deg, #c9c9c9 0%, #fefefe 47.19%, #c9c9c9 100%);
+        transition: opacity var(--animation-style);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.desktop {
+    .steel:hover {
+      background-position: right;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    .black:hover {
+      background-position: right;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    .outline:hover {
+      ion-router-link {
+        color: var(--font-color-black);
+      }
+      box-shadow: 0 0 0 2px var(--font-color-auxiliary), 0px 4px 15px rgba(0, 0, 0, 0.15);
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

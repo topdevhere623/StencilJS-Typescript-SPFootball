@@ -1,0 +1,104 @@
+ffspb-page-head {
+  display: block;
+  width: 100%;
+  &.desktop {
+    height: 400px;
+    position: relative;
+    background: linear-gradient(95.57deg, #333333 0%, #2f2f2f 51.35%, #333333 100%);
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 35%);
+    overflow-x: hidden;
+
+    .content {
+      width: 40%;
+      max-width: 650px;
+      height: 100%;
+      .content-inner {
+        width: 80%;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        .head-wrapper {
+          > * {
+            margin: 0;
+            color: var(--font-color-main);
+          }
+        }
+        .text-wrapper {
+          > * {
+            margin-top: calc(2 * var(--padding-main));
+            margin-bottom: calc(2.5 * var(--padding-main));
+            color: var(--font-color-auxiliary);
+          }
+        }
+        .button-wrapper {
+          > * {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 400px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+      background: linear-gradient(53deg, #d4d4d4 0, #696969 33%);
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        transform: translateX(5px);
+      }
+    }
+
+    ftb-post-photo {
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+      transform: translateX(5px);
+      img {
+        transform: none !important;
+      }
+    }
+  }
+
+  &.mobile {
+    .img-wrapper {
+      height: 200px;
+      background: black;
+      img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content-wrapper {
+      background: linear-gradient(95.57deg, #333333 0%, #2f2f2f 51.35%, #333333 100%);
+      padding: calc(3 * var(--padding-main)) calc(2 * var(--padding-main));
+      .head-wrapper {
+        > * {
+          margin: 0;
+          color: var(--font-color-main);
+        }
+      }
+      .text-wrapper {
+        > * {
+          margin-top: calc(2 * var(--padding-main));
+          color: var(--font-color-auxiliary);
+          margin-bottom: calc(2.5 * var(--padding-main));
+        }
+      }
+      .button-wrapper {
+        > * {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

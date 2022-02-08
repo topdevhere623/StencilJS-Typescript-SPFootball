@@ -1,0 +1,20 @@
+ffspb-welcome-page {
+  @import '~swiper/swiper';
+  display: block;
+
+  ffspb-content {
+    background: #414141;
+    min-height: 100%;
+  }
+  .block {
+    width: 100%;
+    max-width: calc(var(--content-width) + 80px);
+    min-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+    .block-inner {
+      width: 100%;
+      max-width: calc(var(--content-width));
+    }
+  }
+}

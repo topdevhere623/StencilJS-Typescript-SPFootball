@@ -1,0 +1,42 @@
+ffspb-switch {
+  display: flex;
+  background: #3d3d3d;
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: var(--border-radius);
+  width: fit-content;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  button {
+    height: var(--control-element-height);
+    padding: 0 calc(3 * var(--padding-main));
+    display: block;
+    background: transparent;
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    font-size: var(--font-size-main);
+    color: white;
+    transition: color 0.3s ease-in-out;
+    outline: none;
+    &.selected {
+      color: black;
+    }
+    z-index: 2;
+  }
+  .toggler {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    background: white;
+    z-index: -1;
+    transform: translateX(-100%);
+  }
+  &.adjusted {
+    .toggler {
+      transition: transform var(--animation-style);
+    }
+  }
+}

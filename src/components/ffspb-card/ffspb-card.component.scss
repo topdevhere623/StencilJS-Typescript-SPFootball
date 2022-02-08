@@ -1,0 +1,18 @@
+ffspb-card {
+  display: block;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: #2e2e2e;
+  ion-router-link {
+    display: block;
+  }
+  &.link {
+    cursor: pointer;
+    transition: all var(--animation-style);
+    &:hover {
+      box-shadow: 0px 5px 15px 10px rgba(36, 36, 36, 0.15);
+      transform: translateX(-1px) translateY(-1px);
+      transition: all var(--animation-style) 0.1s;
+    }
+  }
+}

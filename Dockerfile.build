@@ -1,0 +1,16 @@
+FROM node:15-alpine
+
+RUN apk --no-cache add --virtual builds-deps build-base git python
+
+WORKDIR /usr/src/app
+
+COPY package.json .
+COPY scripts scripts/
+
+RUN npm i -g typescript && npm i
+
+COPY . .
+
+ENV NODE_ENV production
+
+RUN ./node_modules/@stencil/core/bin/stencil build --prod

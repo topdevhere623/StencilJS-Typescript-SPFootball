@@ -1,0 +1,58 @@
+ffspb-player-statics {
+  ffspb-card {
+    ffspb-card-content {
+      .cards {
+        display: flex;
+        align-items: center;
+        padding-left: calc(1.5 * var(--padding-main));
+        padding-right: calc(1.5 * var(--padding-main));
+        gap: calc(2.5 * var(--padding-main));
+        div.card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .cd {
+            height: calc(1.5 * var(--padding-main));
+            width: calc(1.5 * var(--padding-main));
+            border-radius: 50%;
+            margin-right: var(--padding-main);;
+          }
+          .yellow-card {
+            background-color: yellow;
+          }
+          .red-card {
+            background-color: red;
+          }
+        }
+      }
+      div.percent-col{
+        background-color: #282828;
+        color: var(--font-color-auxiliary);
+        writing-mode: vertical-rl;
+        text-align: center;
+        transform: rotate(180deg);
+        padding-left: calc(1.5 * var(--padding-main));
+        padding-right: calc(1.5 * var(--padding-main));
+  }
+      div.percent {
+        width: 40px;
+        background-color: #1E1E1E;
+        position:relative;
+        .bar {
+          width: calc(4 * var(--padding-main));
+          display:block;
+          background: linear-gradient(111.34deg, #979797 0%, #4A4A4A 100%);
+          color: var(--font-color-main);
+          position:absolute;
+          bottom:0;
+          height: 62%;
+          text-align: center;
+          p {
+            vertical-align: bottom;
+            margin-top: calc(7 * var(--padding-main));
+          }
+        }
+      }
+    }
+  }
+}

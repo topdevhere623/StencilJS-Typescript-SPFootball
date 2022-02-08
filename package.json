@@ -1,0 +1,42 @@
+{
+  "name": "ftb-ffspb",
+  "description": "St.Petersburg football",
+  "private": true,
+  "version": "0.1.8",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "npm run start",
+    "dev-server": "NODE_ENV=development node backend/index.js",
+    "gen": "node scripts/generate-component.js",
+    "release": "node scripts/release.js",
+    "update": "npm-check-updates -u && npm i",
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watch",
+    "generate": "stencil generate",
+    "postinstall": "node scripts/postinstall.js",
+    "build-docker": "node scripts/build-docker.js"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^12.0.2",
+    "prettier": "^2.5.0",
+    "simple-git": "^2.47.0"
+  },
+  "dependencies": {
+    "@ionic/core": "^5.9.1",
+    "@stencil/core": "^2.11.0",
+    "@stencil/sass": "^1.5.2",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "ftb-cmp": "^2.7.1",
+    "ftb-models": "^3.12.1",
+    "rxjs": "^7.4.0",
+    "stencil-inline-svg": "^1.1.0",
+    "swiper": "^6.8.4",
+    "ymaps": "^0.2.1"
+  }
+}

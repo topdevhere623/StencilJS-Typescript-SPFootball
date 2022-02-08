@@ -1,0 +1,98 @@
+ffspb-welcome-partners {
+  .desktop-wrapper {
+    display: block;
+    margin-top: 60px;
+
+    .swiper-slide {
+      text-align: center;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .partners-line {
+      margin-top: 40px;
+      height: 166px;
+      background: #515151;
+      box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.15);
+      text-align: center;
+
+      .partner {
+        display: block;
+        opacity: 0.8;
+        margin-top: 38px;
+        width: fit-content;
+        &:hover {
+          opacity: 1;
+        }
+        img {
+          height: 90px;
+          margin: 0 40px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .partners-line {
+        height: 146px;
+      }
+      .partner {
+        margin-top: 33px !important;
+      }
+      img {
+        height: 80px !important;
+        margin: 0 30px !important;
+      }
+    }
+    @media only screen and (max-width: 1000px) {
+      .partners-line {
+        height: 126px;
+      }
+      .partner {
+        margin-top: 28px !important;
+      }
+      img {
+        height: 70px !important;
+        margin: 0 20px !important;
+      }
+    }
+  }
+
+  .mobile-wrapper {
+    margin-top: 40px;
+    h2 {
+      text-align: left;
+      margin-bottom: 0;
+    }
+    .partners-line {
+      margin-top: 20px;
+      background: #515151;
+      box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .partner {
+        display: inline-block;
+        height: 60px;
+        margin: 20px 0;
+        img {
+          height: 60px;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}

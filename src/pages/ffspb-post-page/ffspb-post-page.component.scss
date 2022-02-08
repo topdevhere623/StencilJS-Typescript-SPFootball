@@ -1,0 +1,99 @@
+ffspb-post-page {
+  ftb-post-photo {
+    background: #232323;
+  }
+
+  ffspb-page-head {
+    ftb-post-photo {
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+      transform: translateX(5px);
+      img {
+        transform: none !important;
+      }
+    }
+  }
+
+  .date {
+    margin: calc(3 * var(--padding-main)) 0;
+    color: var(--font-color-main);
+  }
+  ftb-post-body {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--padding-main);
+    br {
+      display: none;
+    }
+    strong {
+      color: var(--font-color-main);
+    }
+  }
+
+  .share {
+    color: var(--font-color-main);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: calc(var(--padding-main) * 2);
+    ftb-icon {
+      height: 30px;
+      width: 30px;
+      margin: 0 calc(var(--padding-main) / 4);
+      fill: var(--font-color-main);
+      path {
+        fill: var(--font-color-main);
+      }
+      &:first-of-type {
+        margin-left: var(--padding-main);
+      }
+      &.twitter-icon {
+        height: 28px;
+        width: 28px;
+      }
+      &.vk-icon {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+
+  .related-posts {
+    display: grid;
+    grid-column-gap: var(--padding-main);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+    .post-card {
+      height: 300px;
+      text-align: left;
+      ftb-post-photo {
+        height: 120px;
+        background: #232323;
+        img {
+          object-fit: cover;
+        }
+      }
+      .img-border {
+        background: linear-gradient(180deg, #d4d4d4 -0.02%, #696969 220%);
+        height: 3px;
+        width: 100%;
+      }
+      .date {
+        margin: 15px;
+        color: var(--font-color-auxiliary);
+        font-size: 14px;
+      }
+      .title {
+        font-size: 18px;
+        color: var(--font-color-main);
+        margin: 0 15px;
+      }
+      .preview {
+        font-size: 16px;
+        color: var(--font-color-auxiliary);
+      }
+    }
+  }
+}
